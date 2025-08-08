@@ -1,7 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { Star } from "lucide-react";
-
+import { SignIn } from "@clerk/clerk-react";
 const Login = () => {
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
@@ -31,15 +31,20 @@ const Login = () => {
               <p>Used by 12k developers</p>
             </div>
           </div>
-          <h1 className="text-3xl lg:text-6xl mb:pb-2 font-bold bg-gradient-to-r from-indigo-950 to-indigo-800 bg-clip-text text-transparent ">More than just friends truly connects</h1>
-          <p className="text-xl md:text-3xl text-indigo-900 max-w-72 md:max-w-md">Connect with global community on INFLUENCE</p>
+          <h1 className="text-3xl lg:text-6xl mb:pb-2 font-bold bg-gradient-to-r from-indigo-950 to-indigo-800 bg-clip-text text-transparent ">
+            More than just friends truly connects
+          </h1>
+          <p className="text-xl md:text-3xl text-indigo-900 max-w-72 md:max-w-md">
+            Connect with global community on INFLUENCE
+          </p>
         </div>
         <span className="md:h-10"></span>
       </div>
 
       {/* Right side: Login form */}
       <div className="flex flex-1 items-center justify-center p-6 sm:p-10">
-        
+        {/*  import signin from clerk*/}
+        <SignIn />
       </div>
     </div>
   );
