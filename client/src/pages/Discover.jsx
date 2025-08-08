@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dicover = () => {
+const Discover = () => {
   return (
     <div>
       
@@ -8,4 +8,5 @@ const Dicover = () => {
   )
 }
 
-export default Dicover
+export default Discover
+
