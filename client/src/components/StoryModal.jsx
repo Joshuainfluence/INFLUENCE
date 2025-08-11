@@ -1,5 +1,6 @@
 import { ArrowLeft, Sparkle, TextIcon, Upload } from "lucide-react";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const StoryModal = ({ setShowModal, fetchStories }) => {
   const bgColors = [
@@ -25,7 +26,7 @@ const StoryModal = ({ setShowModal, fetchStories }) => {
   };
 
   const handleCreateStory = async () => {
-    
+
   };
   return (
     <div className="fixed inset-0 z-110 min-h-screen bg-black/80 backdrop-blur text-white flex items-center justify-center p-4">
@@ -84,7 +85,9 @@ const StoryModal = ({ setShowModal, fetchStories }) => {
           </label>
         </div>
 
-        <button className="flex items-center justify-center gap-2 text-white py-3 mt-4 w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 active:scale-95 transition cursor-pointer">
+        <button onClick={()=>toast.promise(handleCreateStory(), {
+          loading: 'saving...', success: <p>Story Added</p>, error: e => <p>{e.message}</p>
+        })} className="flex items-center justify-center gap-2 text-white py-3 mt-4 w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 active:scale-95 transition cursor-pointer">
           <Sparkle size={18} /> Create Story
         </button>
       </div>
