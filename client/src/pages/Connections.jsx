@@ -50,11 +50,12 @@ const Connections = () => {
         </div>
 
         {/* tabs */}
-        <div className="inlind-flex flex-wrap items-center border border-gray-200 rounded-md p-1 bg-white shadow-sm">
+        <div className="inline-flex flex-wrap items-center border border-gray-200 rounded-md p-1 bg-white shadow-sm">
           {dataArray.map((tab) => (
             <button
+            onClick={()=> setCurrentTab(tab.label)}
               key={tab.label}
-              className={`flex items-center text-sm rounded-md px-3 py-1 transition-colors ${
+              className={`cursor-pointer flex items-center text-sm rounded-md px-3 py-1 transition-colors ${
                 currentTab === tab.label
                   ? "bg-white font-medium text-black"
                   : "text-gray-500 hover:text-black"
