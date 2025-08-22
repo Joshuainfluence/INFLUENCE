@@ -130,9 +130,9 @@ const Connections = () => {
         </div> */}
 
         <div className="flex flex-wrap gap-6 mt-6">
-          {dataArray.find((item)=>item.label === currentTab).map((user)=>(
+          {/* {dataArray.find((item)=>item.label === currentTab).map((user)=>(
             <div>{user.full_name}</div>
-          ))}
+          ))} */}
           <h1>hello</h1>
         </div>
       </div>
