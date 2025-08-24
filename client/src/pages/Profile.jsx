@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { dummyPostsData, dummyUserData } from "../assets/assets";
 import Loading from "../components/Loading";
+import UserProfileInfo from "../components/UserProfileInfo";
 
 const Profile = () => {
   const { profileId } = useParams();
@@ -26,13 +27,16 @@ const Profile = () => {
         <div className="bg-white rounded-2xl shadow overflow-hidden">
           {/* cover photo */}
           <div className="h-40 md:h-56 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200">
-            {user.cover_photo && (
+            {user.cover_photo && 
               <img
                 src={user.cover_photo}
                 className="w-full h-full object-cover"
               />
-            )}
+            }
           </div>
+
+           {/* user info */}
+           <UserProfileInfo user={user} posts={posts} profileId={profileId} />
         </div>
       </div>
     </div>

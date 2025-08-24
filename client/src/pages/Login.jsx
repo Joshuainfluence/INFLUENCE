@@ -28,14 +28,14 @@ const Login = () => {
                     />
                   ))}
               </div>
-              <p>Used by 12k delsuites</p>
+              <p>Used by 12k developers</p>
             </div>
           </div>
           <h1 className="text-3xl lg:text-6xl mb:pb-2 font-bold bg-gradient-to-r from-indigo-950 to-indigo-800 bg-clip-text text-transparent ">
             More than just friends truly connects
           </h1>
           <p className="text-xl md:text-3xl text-indigo-900 max-w-72 md:max-w-md">
-            Connect with Delsu Students on INFLUENCE
+            Connect with FRIENDS on INFLUENCE
           </p>
         </div>
         <span className="md:h-10"></span>
