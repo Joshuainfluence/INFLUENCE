@@ -28,7 +28,7 @@ const Login = () => {
                     />
                   ))}
               </div>
-              <p>Used by 12k developers</p>
+              <p>Used by 12k people</p>
             </div>
           </div>
           <h1 className="text-3xl lg:text-6xl mb:pb-2 font-bold bg-gradient-to-r from-indigo-950 to-indigo-800 bg-clip-text text-transparent ">
